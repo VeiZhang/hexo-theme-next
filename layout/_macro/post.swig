@@ -134,15 +134,14 @@
                   <span class="post-comments-count fb-comments-count" data-href="{{ post.permalink }}" itemprop="commentCount">0</span> comments
                 </a>
               </span>
-            {% elseif theme.disqus.enable and theme.disqus.count %}
+            {% elseif theme.disqus_shortname %}
               <span class="post-comments-count">
                 <span class="post-meta-divider">|</span>
                 <span class="post-meta-item-icon">
                   <i class="fa fa-comment-o"></i>
                 </span>
                 <a href="{{ url_for(post.path) }}#comments" itemprop="discussionUrl">
-                  <span class="post-comments-count disqus-comment-count"
-                        data-disqus-identifier="{{ post.path }}" itemprop="commentCount"></span>
+                  <span class="post-comments-count disqus-comment-count" data-disqus-identifier="{{ post.path }}" itemprop="commentCount"></span>
                 </a>
               </span>
             {% elseif theme.hypercomments_id %}
@@ -167,21 +166,6 @@
                   <span class="post-comments-count join-count" itemprop="commentCount"></span>
                 </a>
               </span>
-            {% elseif theme.changyan.enable and theme.changyan.appid and theme.changyan.appkey %}
-              <span class="post-comments-count">
-              <span class="post-meta-divider">|</span>
-              <span class="post-meta-item-icon">
-                <i class="fa fa-comment-o"></i>
-              </span>
-              {% if is_post() %}
-                <a href="{{ url_for(post.path) }}#SOHUCS" itemprop="discussionUrl">
-                  <span id="changyan_count_unit" class="post-comments-count hc-comment-count" data-xid="{{ post.path }}" itemprop="commentsCount"></span>
-                </a>
-              {% else %}
-                <a href="{{ url_for(post.path) }}#SOHUCS" itemprop="discussionUrl">
-                  <span id="url::{{ post.permalink }}" class="cy_cmt_count" data-xid="{{ post.path }}" itemprop="commentsCount" ></span>
-                </a>
-              {% endif %}
             {% endif %}
           {% endif %}
 
@@ -189,13 +173,11 @@
           {% if theme.leancloud_visitors.enable %}
              <span id="{{ url_for(post.path) }}" class="leancloud_visitors" data-flag-title="{{ post.title }}">
                <span class="post-meta-divider">|</span>
-               <span class="post-meta-item-icon">
-                 <i class="fa fa-eye"></i>
-               </span>
                {% if theme.post_meta.item_text %}
                  <span class="post-meta-item-text">{{__('post.visitors')}} </span>
                {% endif %}
                  <span class="leancloud-visitors-count"></span>
+				 <span>℃</span>
              </span>
           {% endif %}
 
