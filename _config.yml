@@ -292,7 +292,10 @@ mathjax:
 #duoshuo_shortname:
 
 # Disqus
-#disqus_shortname:
+disqus:
+  enable: false
+  shortname:
+  count: true
 
 # Hypercomments
 #hypercomments_id:
@@ -473,6 +476,9 @@ fancybox: true
 # Canvas-nest
 canvas_nest: false
 
+#three_waves
+three_waves: false
+
 # Script Vendors.
 # Set a CDN address for the vendor you want to customize.
 # For example
@@ -523,6 +529,10 @@ vendors:
   # Internal version: 1.0.0
   # https://github.com/hustcc/canvas-nest.js
   canvas_nest:
+  
+  #three
+  three:
+  three_waves:
 
 
 
