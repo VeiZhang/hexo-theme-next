@@ -189,7 +189,8 @@
           {% if theme.leancloud_visitors.enable %}
              <span id="{{ url_for(post.path) }}" class="leancloud_visitors" data-flag-title="{{ post.title }}">
                <span class="post-meta-divider">|</span>
-               {% if theme.post_meta.item_text %}
+               <!-- 去掉阅读的眼睛图标，阅读次数改为℃ -->
+			   {% if theme.post_meta.item_text %}
                  <span class="post-meta-item-text">{{__('post.visitors')}} </span>
                {% endif %}
                  <span class="leancloud-visitors-count"></span>
