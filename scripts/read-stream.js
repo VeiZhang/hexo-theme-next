@@ -24,7 +24,7 @@ hexo.extend.tag.register('readStream', function(args, content){
   }
   result += '<div class="hexo-img-readStream">';
   result += '<style type="text/css">';
-  result += '.hexo-image-stream-lazy {display:block;}.hexo-img-readStream{width:100%;max-width:1100px;margin:3% auto}div.hexo-img-readStream readItems{ background: #fefefe;box-shadow: 0 1px 2px rgba(34, 25, 25, 0.2);margin: 0 0.5% 3%;padding: 0%;padding-bottom: 9px;display: inline-block;max-width: 42%;}div.hexo-img-readStream readItems img{padding-bottom:10px;max-width: 84%;margin-top: 0.7em;}div.hexo-img-readStream readItems figcaption{font-size:.8rem;color:#999;line-height:1.5;overflow:hidden;text-overflow:ellipsis;white-space:nowrap;text-align: center;}div.hexo-img-readStream small{font-size:1rem;float:right;text-transform:uppercase;color:#aaa}div.hexo-img-readStream small a{color:#666;text-decoration:none;transition:.4s color}@media screen and (max-width:750px){.hexo-img-readStream{column-gap:0}}';
+  result += '.hexo-image-stream-lazy {display:block;}.hexo-img-readStream{width:90%;max-width:1100px;margin:3% auto}div.hexo-img-readStream readItems{ background: #fefefe;box-shadow: 0 1px 2px rgba(34, 25, 25, 0.2);margin: 0 1% 3%;padding: 3%;padding-bottom: 9px;display: inline-block;max-width: 25%;}div.hexo-img-readStream readItems img{padding-bottom:10px;margin-top: 0.7em;}div.hexo-img-readStream readItems figcaption{font-size:.8rem;color:#999;line-height:1.5;overflow:hidden;text-overflow:ellipsis;white-space:nowrap;text-align: center;}div.hexo-img-readStream small{font-size:1rem;float:right;text-transform:uppercase;color:#aaa}div.hexo-img-readStream small a{color:#666;text-decoration:none;transition:.4s color}@media screen and (max-width:750px){.hexo-img-readStream{column-gap:0}}';
   result += '</style>';
   result += content;
   result += '</div>';
@@ -43,8 +43,8 @@ hexo.extend.tag.register('readItems', function(args){
   result += '<a href="' + imgUrl + '" target="_blank" rel="external">'
   result += '<img class="hexo-image-stream-lazy nofancy" src="' + placeholder + '" data-original="' + imgUrl + '"/>';
   result += '<noscript><img src="' + imgUrl + '"/></noscript>' + '</a>';
-  result += '<a href="' + wordUrl + '" target="_blank" rel="external">'
-  result += '<figcaption>'+title+'</figcaption></a>';
+  result += '<figcaption>' + '<a href="' + wordUrl + '" target="_blank" rel="external" id="favorite">'
+  result += title+'</a></figcaption>';
   
   
 //   result += '<img class="hexo-image-stream-lazy nofancy" src="' + placeholder + '" data-original="' + imgUrl + '"/>';
