@@ -316,14 +316,11 @@
       {% endif %}
     </div>
 
-	<!-- 开启文章打赏开关 -->
-	{% if post.reward %}
-		<div>
-		  {% if not is_index%}
-			{% include 'reward.swig' %}
-		  {% endif %}
-		</div>
-	{% endif %}
+    <div>
+      {% if not is_index %}
+        {% include 'reward.swig' %}
+      {% endif %}
+    </div>
 
     <div>
       {% if not is_index %}
