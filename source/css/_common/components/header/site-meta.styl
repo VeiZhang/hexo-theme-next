@@ -29,6 +29,17 @@
   font-size: $logo-font-size;
   font-weight: normal;
   font-family: $font-family-logo;
+
+  /** 站点主题文字特效 **/
+  text-decoration:none;   
+  -webkit-transition: all 1.0s;
+  -moz-transition: all 1.0s;
+  transition: all 1.0s;
+  &:hover {
+	-webkit-animation: neon 1.5s ease-in-out infinite alternate;
+	-moz-animation: neon 1.5s ease-in-out infinite alternate;
+	animation: neon 1.5s ease-in-out infinite alternate;
+  }
 }
 
 .site-subtitle {

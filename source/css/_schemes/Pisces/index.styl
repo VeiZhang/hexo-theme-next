@@ -19,18 +19,24 @@ body::before {
 	will-change:bg-move;
 	animation:bg-move 50s linear 2s infinite alternate;
 	-webkit-animation:bg-move 50s linear 2s infinite alternate;
-	@media screen and (max-width: 767px){
+	@media screen and (max-width: 767px) {
 		background-size: auto !import;
 	}
-	@keyframes bg-move
-	{
-	from {background-position: 0 0;}
-	to {background-position: 100% 0;}
+	@keyframes bg-move {
+		from {
+			background-position: 0 0;
+		}
+		to {
+			background-position: 100% 0;
+		}
 	}
 	
-	@-webkit-keyframes bg-move
-	{
-		from {background-position: 0 0;}
-		to {background-position: 100% 0;}
+	@-webkit-keyframes bg-move {
+		from {
+			background-position: 0 0;
+		}
+		to {
+			background-position: 100% 0;
+		}
 	}
 }
