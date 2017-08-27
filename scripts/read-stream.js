@@ -1,3 +1,4 @@
+// 自定义设置：收藏
 'use strict';
 
 var config = {
