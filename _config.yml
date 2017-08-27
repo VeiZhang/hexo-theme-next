@@ -49,8 +49,8 @@ menu:
   home: /
   #categories: /categories/
   #about: /about/
-  archives: /archives/
-  tags: /tags/
+  #archives: /archives/
+  #tags: /tags/
   #sitemap: /sitemap.xml
   #commonweal: /404/
 
@@ -205,6 +205,7 @@ post_wordcount:
   item_text: true
   wordcount: false
   min2read: false
+  totalcount: false
   separated_meta: true
 
 # Wechat Subscriber
@@ -336,6 +337,18 @@ changyan:
   appid:
   appkey:
 
+    
+# Valine. 
+# You can get your appid and appkey from https://leancloud.cn
+# more info please open https://github.com/xCss/Valine
+valine:
+  enable: false
+  appid:  # your leancloud application appid
+  appkey:  # your leancloud application appkey
+  notify: false # mail notifier , https://github.com/xCss/Valine/wiki
+  verify: false # Verification code
+  placeholder: Comment input placeholder
+
 # Support for youyan comments system.
 # You can get your uid from http://www.uyan.cc
 #youyan_uid: your uid
@@ -369,6 +382,10 @@ changyan:
 # Google Analytics
 #google_analytics:
 
+# Bing Webmaster tools verification setting
+# See: https://www.bing.com/webmaster/
+#bing_site_verification:
+
 # Yandex Webmaster tools verification setting
 # See: https://webmaster.yandex.ru/
 #yandex_site_verification:
@@ -388,6 +405,7 @@ duoshuo_info:
   admin_enable: false
   user_id: 0
   #admin_nickname: Author
+
 
 
 # Facebook SDK Support.
@@ -540,7 +558,21 @@ tabs:
 #! ---------------------------------------------------------------
 
 # Motion
-use_motion: true
+motion:
+  enable: true
+  async: false
+  transition:
+    # Transition variants:
+    # fadeIn | fadeOut | flipXIn | flipXOut | flipYIn | flipYOut | flipBounceXIn | flipBounceXOut | flipBounceYIn | flipBounceYOut
+    # swoopIn | swoopOut | whirlIn | whirlOut | shrinkIn | shrinkOut | expandIn | expandOut
+    # bounceIn | bounceOut | bounceUpIn | bounceUpOut | bounceDownIn | bounceDownOut | bounceLeftIn | bounceLeftOut | bounceRightIn | bounceRightOut
+    # slideUpIn | slideUpOut | slideDownIn | slideDownOut | slideLeftIn | slideLeftOut | slideRightIn | slideRightOut
+    # slideUpBigIn | slideUpBigOut | slideDownBigIn | slideDownBigOut | slideLeftBigIn | slideLeftBigOut | slideRightBigIn | slideRightBigOut
+    # perspectiveUpIn | perspectiveUpOut | perspectiveDownIn | perspectiveDownOut | perspectiveLeftIn | perspectiveLeftOut | perspectiveRightIn | perspectiveRightOut
+    post_block: fadeIn
+    post_header: slideDownIn
+    post_body: slideDownIn
+    coll_header: slideLeftIn
 
 # Fancybox
 fancybox: true
