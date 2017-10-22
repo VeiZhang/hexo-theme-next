@@ -90,3 +90,11 @@ symbol:
   comma: '， '
   period: '。 '
   colon: '：'
+
+reward:
+  donate: 赏
+  wechatpay: 微信打赏
+  alipay: 支付宝打赏
+  bitcoin: 比特币
+
+gitmentbutton: 显示 Gitment 评论

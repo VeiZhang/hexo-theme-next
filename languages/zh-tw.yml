@@ -16,6 +16,8 @@ menu:
   schedule: 日程表
   sitemap: 站點地圖
   commonweal: 公益404
+  guestbook: 留言
+  favourite: 收藏
 
 sidebar:
   overview: 本站概覽
@@ -88,3 +90,11 @@ symbol:
   comma: '， '
   period: '。 '
   colon: '：'
+
+reward:
+  donate: 賞
+  wechatpay: 微信打賞
+  alipay: 支付寶打賞
+  bitcoin: 比特幣
+
+gitmentbutton: 顯示 Gitment 評論
