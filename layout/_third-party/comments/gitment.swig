@@ -23,7 +23,8 @@
       <script type="text/javascript">
       function renderGitment(){
         var gitment = new {{CommentsClass}}({
-            id: window.location.pathname, 
+            <!-- 修复gitment评论页初始化错误@tiimor -->
+            id: '{{ page.date }}', 
             owner: '{{ theme.gitment.github_user }}',
             repo: '{{ theme.gitment.github_repo }}',
             {% if theme.gitment.mint %}
