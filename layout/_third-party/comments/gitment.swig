@@ -23,6 +23,7 @@
       <script type="text/javascript">
       function renderGitment(){
         var gitment = new {{CommentsClass}}({
+            <!-- modify by zhangwei -->
             <!-- 修复gitment评论页初始化错误@tiimor -->
             id: '{{ page.date }}', 
             owner: '{{ theme.gitment.github_user }}',

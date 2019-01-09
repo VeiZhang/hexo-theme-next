@@ -203,6 +203,7 @@
           {% if theme.leancloud_visitors.enable %}
              <span id="{{ url_for(post.path) }}" class="leancloud_visitors" data-flag-title="{{ post.title }}">
                <span class="post-meta-divider">|</span>
+               <!-- modify by zhangwei -->
                <!-- 去掉阅读的眼睛图标，阅读次数改为℃ -->
 			   {% if theme.post_meta.item_text %}
                  <span class="post-meta-item-text">{{__('post.visitors')}} </span>
@@ -355,7 +356,8 @@
       {% if post.tags and post.tags.length and not is_index %}
         <div class="post-tags">
           {% for tag in post.tags %}
-			<!-- 文章底部标签图标 -->
+            <!-- modify by zhangwei -->
+            <!-- 文章底部标签图标 -->
             <a href="{{ url_for(tag.path) }}" rel="tag"><i class="menu-item-icon fa fa-tag fa-fw"></i>{{ tag.name }}</a>
           {% endfor %}
         </div>
